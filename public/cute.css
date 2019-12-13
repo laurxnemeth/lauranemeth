@@ -1,0 +1,140 @@
+/* EVRYTHING */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+/* END OF EVERYTHING */
+
+/* NAV BAR */
+.topnav {
+    display: flex;
+    background-color: #e2d2f5;
+    justify-content: space-around;
+    color: #f2eef5;
+    padding: 1%;
+    position: fixed;
+    top: 0;
+    width: 98%;
+    font-family: "Open Sans";
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #181818;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 20px;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4fc4cf;
+    color: white;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 20px;
+  }
+
+/* END OF NAV BAR */
+
+/* BODY */
+
+body {
+    display: flex;
+    background-color: #fffffe;
+    font-family: "Montserrat";
+    flex-direction: column;
+  }
+  
+  .full-width-bar {
+    margin: 0 -9999rem;
+    padding: 0.25rem 9999rem;
+    background: #4fc4cf;
+  
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 6em;
+    font-weight: 400;
+    line-height: 2;
+    margin: 1em 0 1em 0;
+    letter-spacing: -0.05em;
+    color: #181818;
+  }
+  
+  h2 {
+      color: #f2eef5;
+      text-align: center;
+      justify-content: center;
+      margin: 0 auto;
+  }
+  
+  ul {
+    color: #2e2e2e;
+    font-size: 35px;
+    list-style: none;
+  } 
+  
+  #eduInfo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .educationBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+/* END OF BODY */
+
+/* UNIVERSITY CUTE IMAGES */
+
+  /* relevant styles */
+  .img__wrap {
+    position: relative;
+    height: 300px;
+    width: 300px;
+  }
+  
+  .img__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: grey;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+  
+    /* transition effect. not necessary */
+    transition: opacity .2s, visibility .2s;
+  }
+  
+  .img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+img {
+    width: 100%;
+    height: auto;
+  }
+
+/* END OF CUTE IMAGES */
