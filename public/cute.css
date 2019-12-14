@@ -104,6 +104,7 @@ body {
     padding: 2%;
     display: flex;
     justify-content: space-around;
+    flex-direction: row;
   }
 
   .school_img {
