@@ -92,6 +92,7 @@ body {
   li {
     list-style-type: none;
     padding: 1%;
+    font-size: 1.5vw;
   }
   
   #eduInfo {
@@ -112,7 +113,12 @@ body {
     width: 75%;
     height: auto;
     justify-content: center;
+    font-size: 1.5vw;
+  }
 
+  .contactBox {
+   text-align: center;
+   font-size: 45px;
   }
 
 /* END OF BODY */
