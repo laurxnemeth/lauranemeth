@@ -1,42 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700&display=swap');
+
+* {
+  background-color: #001514;
+  }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    border: 0;
-    background-color: #f0e8fa;
-  }
+  display: flex;
+  justify-content: center;
+}
 
-  h1{
-    font-size: 75px;
-  }
+header {
+display: flex;
+font-family: 'Montserrat', sans-serif;
+top: 20px;
+font-size: 25px;
+justify-content: center;
+color: #E0E2DB;
+text-shadow: 1px 1px 1px #04A777;
+}
 
-  a {
-    color: rgb(55, 54, 54);
-    text-decoration: none;
-    font-size: 30px;
-  }
+main{
+  display: flex;
+  flex-direction: column;
+}
 
-  a:visited{
-    color: rgb(55, 54, 54);
-  }
+#typewriter-area {
+  font-family: 'Inconsolata', monospace;
+  color: #04A777;
+  height: 100vh;
+  min-width: 100vw;
+}
 
-  a:hover{
-    color: rgb(142, 181, 25);
-  }
+#intro {
+  font-size: 8vh;
+  margin: 4vw;
+}
+
+#arrow {
+  position: absolute;
+  bottom: 3%;
+  left: 48vw;
+  font-size: 30px;
+}
+
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+
+#my-projects {
+  min-height: 90vh;
+  width: 90vw;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #E0E2DB;
+  font-family: 'Montserrat', sans-serif;
+  overflow: auto;
+  padding-bottom: 5%;
+}
+
+#my-projects h2{
+  background-color: inherit; 
+  font-size: 6vh; 
+  margin: 30px;
+}
+
+.each-project{
+  background-color: #E0E2DB; 
+}
+
+.each-project h3{
+  background-color: #E0E2DB; 
+  text-align: center;
+  font-size: 4vh;
+}
+
+.each-project-img{
+  width: 80%;
+  margin: 2% 10% 2% 10%;
+  -webkit-box-shadow: -1px 0px 18px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 18px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 18px 0px rgba(0,0,0,0.75);
+}
+
+#contact-me{
+  height: 100vh;
+  width: 100vw;
+}
 
 @media only screen and (max-width: 600px){
-  h1{
-    font-size: 55px;
-    text-align: center;
-  }
-  a {
-    font-size: 25px;
-  }
+header{
+  font-size: 17px;
+}
+  #intro{
+  font-size: 6vh;
+  min-height: 400px;
+  max-height: 600px;
+}
+#my-projects h3{
+  font-size: 4vh;
+}
+.each-project-img{
+  width: 95%;
+  margin: 2%;
+}
+}
+
+@keyframes blinkingText{
+    0%{ color: #04A777; }
+    49%{ color: #04A777; }
+    60%{ color: transparent; }
+    99%{ color: transparent; }
+    100%{ color: #04A777; }
 }
