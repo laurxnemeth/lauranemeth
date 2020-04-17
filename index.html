@@ -13,8 +13,7 @@
       <header><h3>Laura Nemeth, MLIS</h3></header>
       <main>
         <div id='typewriter-area'>
-        <h2 id='intro' aria-busy="true"></h2>
-        <!-- <h2 style="display:none" aria-hidden='false' aria>Software developer specialized in the NERDS stack. Passionate about the accessibility of information and data.</h2> -->
+        <h2 id='intro' aria-hidden="true"></h2>
         <p id='arrow' class='blinking'>⬇</p>
         </div>
         <div id='my-projects'>
@@ -44,14 +43,23 @@
   let idx = 0
   let text
 
-  const fx = ()=>{  
-    text = str.slice(0, idx++);
-    if(text === str) return;
-
-    document.getElementById('intro').innerHTML = text + '_';
-
-    setTimeout(fx, 79);
+  const firstFunction = new Promise(() => {
+    const fx = () =>{  
+      text = str.slice(0, idx++);
+      if(text === str) return;
+      document.getElementById('intro').innerHTML = text + '_';
+      setTimeout(fx, 79);
   }
+
   fx()
+  })
+
+  const secondFunction = async()=>{
+    await firstFunction()
+    document.getElementById("intro").setAttribute("aria-hidden", "false");
+  }
+
+secondFunction()
+
   </script>
 </html>
