@@ -6,10 +6,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./public/cute.css" />
-    <script src="./index.js"></script>
+    <script src="./script.js"></script>
   </head>
   <body>  
-    <h1>Under construction! Come back soon</h1>
-    <a href='https://www.linkedin.com/in/laurxnemeth'>Reach out while you wait.</a>
+    <div>
+      <header><h3>Laura Nemeth, MLIS</h3></header>
+      <main>
+        <div id='typewriter-area'>
+        <h2 id='intro'></h2>
+        <p id='arrow' class='blinking'>⬇</p>
+        </div>
+        <div id='my-projects'>
+          <h2>Projects</h2>
+          <div class='each-project'>
+            <h3>Wordy</h3>
+          <img class='each-project-img' src='./public/wordy.png' />
+          </div>
+          <div class='each-project'>
+            <h3>Wanderlust</h3>
+          <img class='each-project-img' src='./public/wanderlust.png' />
+          </div>
+          <div class='each-project'>
+            <h3>LAGS Records</h3>
+          <img class='each-project-img' src='./public/lags.png' />
+          </div>
+        </div>
+        <div id='contact-me'>
+          
+        </div>
+      </main>
+    </div>
   </body>
+  <script>
+  const str = "Software developer specialized in the NERDS stack. Passionate about the accessibility of information and data. " 
+  let idx = 0
+  let text
+
+  const fx = ()=>{  
+    text = str.slice(0, idx++);
+    if(text === str) return;
+
+    document.getElementById('intro').innerHTML = text + '_';
+
+    setTimeout(fx, 79);
+  }
+  fx()
+  </script>
 </html>
