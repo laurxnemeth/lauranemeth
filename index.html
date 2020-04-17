@@ -44,7 +44,7 @@
   let idx = 0
   let text
 
-  const firstFunction = new Promise(() => {
+  const firstFunction = (async() => {
     const fx = () =>{  
       text = str.slice(0, idx++);
       if(text === str) return;
