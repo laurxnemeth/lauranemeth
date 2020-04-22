@@ -10,57 +10,57 @@
   </head>
   <body>  
     <div>
-      <header><h3>Laura Nemeth, MLIS</h3></header>
+      <header><a href='#contact-me'>Laura Nemeth, MLIS</a></header>
       <main>
         <div id='typewriter-area'>
         <h2 id='intro' aria-hidden="true"></h2>
-        <h2 id='access-intro'>Under construction. Please come back soon to learn more about me!</h2>
-        <!-- <p id='arrow' class='blinking'>⬇</p> -->
+        <h2 id='access-intro'>Software developer specialized in the NERDS stack. Passionate about the accessibility of information and data.</h2>
+        <p id='arrow' class='blinking'>⬇</p>
         </div>
-        <!-- <div id='my-projects'>
+        <div id='my-projects'>
           <h2>Projects</h2>
           <div class='each-project'>
-            <h3>Wordy</h3>
-          <img class='each-project-img' src='./public/wordy.png' />
+            <a href='https://github.com/laurxnemeth/stackathon-frontend' target="_blank">Wordy</a>
+          <img class='each-project-img' src='./public/wordy.png' aria-hidden="true" />
           </div>
           <div class='each-project'>
-            <h3>Wanderlust</h3>
-          <img class='each-project-img' src='./public/wanderlust.png' />
+            <a href='https://github.com/gh-wanderlust/wanderlust' target="_blank">Wanderlust</a>
+          <img class='each-project-img' src='./public/wanderlust.png' aria-hidden="true" />
           </div>
           <div class='each-project'>
-            <h3>LAGS Records</h3>
-          <img class='each-project-img' src='./public/lags.png' />
+            <a href='https://github.com/GH-LAGS/Grace-Shopper' target="_blank">LAGS Records</a>
+          <img class='each-project-img' src='./public/lags.png' aria-hidden="true" />
           </div>
         </div>
         <div id='contact-me'>
-          <h2>Want to reach out?</h2>
-          
-        </div> -->
+          <h2>Wanna chat?</h2>
+          <div id='social-media'>
+          <a href='https://www.twitter.com/laurxnemeth'>
+            <img class='socials' src='./public/Twitter_Social_Icon_Circle_White.png' alt='twitter profile' />
+          </a>
+          <a href='https://www.github.com/laurxnemeth'>
+            <img class='socials' src='./public/GitHub_Logo_White.png' alt='github profile' />
+          </a>
+          <a href='https://www.linkedin.com/in/laurxnemeth'>
+            <img class='socials' src='./public/linkedin.png' alt='linkedin profile' />
+          </a>
+          </div>
+        </div>
       </main>
     </div>
   </body>
   <script>
-  //const str = "Software developer specialized in the NERDS stack. Passionate about the accessibility of information and data. " 
-  const str = 'Under construction. Please come back soon to learn more about me!.'
+  const str = "Software developer specialized in the NERDS stack. Passionate about the accessibility of information and data. " 
   let idx = 0
   let text
 
-  // const firstFunction = (async() => {
     const fx = () =>{  
       text = str.slice(0, idx++);
       if(text === str) return;
       document.getElementById('intro').innerHTML = text + '_';
-      setTimeout(fx, 79);
+      setTimeout(fx, 75);
   }
 
   fx()
-  // })
-
-  // const secondFunction = async()=>{
-  //   await firstFunction()
-  //   document.getElementById("intro").setAttribute("aria-hidden", "false");
-//   }
-
-// secondFunction()
  </script>
 </html>
