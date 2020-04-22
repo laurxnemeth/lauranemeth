@@ -14,6 +14,7 @@
       <main>
         <div id='typewriter-area'>
         <h2 id='intro' aria-hidden="true"></h2>
+        <h2 id='access-intro'>Under construction. Please come back soon to learn more about me!</h2>
         <!-- <p id='arrow' class='blinking'>⬇</p> -->
         </div>
         <!-- <div id='my-projects'>
@@ -40,11 +41,11 @@
   </body>
   <script>
   //const str = "Software developer specialized in the NERDS stack. Passionate about the accessibility of information and data. " 
-  const str = 'Under construction.'
+  const str = 'Under construction. Please come back soon to learn more about me!.'
   let idx = 0
   let text
 
-  const firstFunction = (async() => {
+  // const firstFunction = (async() => {
     const fx = () =>{  
       text = str.slice(0, idx++);
       if(text === str) return;
@@ -53,13 +54,13 @@
   }
 
   fx()
-  })
+  // })
 
-  const secondFunction = async()=>{
-    await firstFunction()
-    document.getElementById("intro").setAttribute("aria-hidden", "false");
-  }
+  // const secondFunction = async()=>{
+  //   await firstFunction()
+  //   document.getElementById("intro").setAttribute("aria-hidden", "false");
+//   }
 
-secondFunction()
+// secondFunction()
  </script>
 </html>
