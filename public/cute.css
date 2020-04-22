@@ -38,10 +38,14 @@ main{
 #intro {
   font-size: 8vh;
   margin: 4vw;
+  z-index: 1;
+  position: absolute;
 }
 
 #access-intro{
   opacity: 0;
+  height: fit-content;
+  z-index: 0;
 }
 
 #arrow {
