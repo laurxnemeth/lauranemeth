@@ -14,6 +14,7 @@
       <main>
         <div id='typewriter-area'>
         <h2 id='intro' aria-hidden="true"></h2>
+        <h2 id='access-intro'>Software developer specialized in the NERDS stack. Passionate about the accessibility of information and data.</h2>
         <p id='arrow' class='blinking'>⬇</p>
         </div>
         <div id='my-projects'>
@@ -43,7 +44,7 @@
   let idx = 0
   let text
 
-  const firstFunction = new Promise(() => {
+  // const firstFunction = (async() => {
     const fx = () =>{  
       text = str.slice(0, idx++);
       if(text === str) return;
@@ -52,14 +53,14 @@
   }
 
   fx()
-  })
+//   })
 
-  const secondFunction = async()=>{
-    await firstFunction()
-    document.getElementById("intro").setAttribute("aria-hidden", "false");
-  }
+//   const secondFunction = async()=>{
+//     await firstFunction()
+//     document.getElementById("intro").setAttribute("aria-hidden", "false");
+//   }
 
-secondFunction()
+// secondFunction()
 
   </script>
 </html>
