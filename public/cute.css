@@ -37,7 +37,7 @@ main{
 
 #intro {
   font-size: 8vh;
-  margin: 4vw;
+  margin: auto;
   z-index: 1;
   position: absolute;
 }
