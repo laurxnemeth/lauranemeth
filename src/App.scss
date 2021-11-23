@@ -6,18 +6,21 @@ $black: #18161e;
 $brown: #87705f;
 $grey:#cfc9c8;
 
-* {
+.App {
 background-color: #cfc9c8;
 }
 
 #first-section{
+  display: flex;
+  flex-direction: column;
   #top-section {
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
     margin-top: 3em;
-    a {
-      margin: auto 2em;
+    span {
+      margin: auto 4em;
+      z-index: 1;
     }
     h3 {
       margin-left: 2em;
@@ -30,6 +33,9 @@ background-color: #cfc9c8;
     h1 {
         font-size: 11vw;
         font-family: 'Birthstone Bounce', cursive;
+        z-index: 1;
+        position:relative;
+        background: transparent;
     }
     .name{
         margin: 0px;
@@ -37,12 +43,45 @@ background-color: #cfc9c8;
     img{
         height: 55vh;
         width: auto;
+        z-index: 1;
+        position:relative
     }
-    height: 100vh;
   }
+  #wrap{
+    display: flex;
+    #decorative-circle{
+      width: 40em;
+      height: 40em;
+      background-color: $dusty-orange;
+      z-index: 0;
+      border-radius: 50%;
+      position: absolute;
+      margin: -170px;
+    }
+  }
+  height: 100vh;
 }
 
 #second-section{
   height: 100vh;
 }
 
+.sub{
+  cursor: pointer;
+  color: $black;
+  font-weight: bold;
+}
+
+.sub:hover{
+  color: $dusty-orange;
+}
+
+button.btn{
+  background-color: $dusty-orange;
+  border-color: $dusty-orange;
+}
+
+button.btn:hover{
+  background-color: $black;
+  color: $grey;
+}
