@@ -1,10 +1,24 @@
+//google fonts
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&family=Outfit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Outfit&display=swap');
 
 // variables
 $dusty-orange: #c98176;
 $black: #18161e;
 $brown: #87705f;
 $grey:#cfc9c8;
+
+//fonts
+$outfit: 'Outfit', sans-serif;
+$birthstone: 'Birthstone Bounce', cursive;
+$montserrat: 'Montserrat', sans-serif;
+
+//sizes
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1200px;
 
 .App {
 background-color: #cfc9c8;
@@ -18,9 +32,14 @@ background-color: #cfc9c8;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 3em;
-    span {
+    span.sub {
       margin: auto 4em;
-      z-index: 1;
+      cursor: pointer;
+      color: $black;
+      font-weight: bold;
+    }
+    span.sub:hover{
+      color: $dusty-orange;
     }
     h3 {
       margin-left: 2em;
@@ -29,59 +48,64 @@ background-color: #cfc9c8;
   #name-and-headshot{
       display: flex;
       justify-content: space-around;
-      padding-top: 12vh;
+      padding: 5vh;
     h1 {
-        font-size: 11vw;
-        font-family: 'Birthstone Bounce', cursive;
-        z-index: 1;
-        position:relative;
+        font-size: 150px;
         background: transparent;
+        font-family: $birthstone;
+    }
+    #name-wrapper{
+      display: flex;
+      flex-direction: column;
+      max-height: 40em; 
+      position: relative;
     }
     .name{
         margin: 0px;
     }
     img{
-        height: 55vh;
-        width: auto;
-        z-index: 1;
-        position:relative
-    }
-  }
-  #wrap{
-    display: flex;
-    #decorative-circle{
-      width: 40em;
       height: 40em;
-      background-color: $dusty-orange;
-      z-index: 0;
-      border-radius: 50%;
-      position: absolute;
-      margin: -170px;
+      width: auto;
+      border: 50px solid $dusty-orange;
+      position: relative;
     }
   }
-  height: 100vh;
+  height: max-content;
+  #info-modal{
+    .title{
+      font-family: $outfit;
+    }
+    button.btn{
+      background-color: $dusty-orange;
+      border-color: $dusty-orange;
+    }
+    button.btn:hover{
+      background-color: $black;
+      color: $grey;
+    }
+  }
 }
 
 #second-section{
-  height: 100vh;
+  height: max-content;
 }
 
-.sub{
-  cursor: pointer;
-  color: $black;
-  font-weight: bold;
+@media screen and (max-width: 800px) {
+  #name-and-headshot {
+    flex-direction: column;
+    #name-wrapper {
+      h1 {
+          font-size: 100px;
+      }
+      height: max-content;
+    }
+    img{
+      height: 1em;
+      width: auto;
+      border: 30px solid $dusty-orange;
+    }
+  }
 }
 
-.sub:hover{
-  color: $dusty-orange;
-}
 
-button.btn{
-  background-color: $dusty-orange;
-  border-color: $dusty-orange;
-}
 
-button.btn:hover{
-  background-color: $black;
-  color: $grey;
-}
