@@ -11,7 +11,7 @@ export default function InfoModal(props) {
 			centered
 		>
 			<Modal.Header closeButton>
-				<Modal.Title id="contained-modal-title-vcenter" class="title">
+				<Modal.Title id="contained-modal-title-vcenter" className="title">
 					Contact Me
 				</Modal.Title>
 			</Modal.Header>

@@ -24,33 +24,39 @@ $desktop: 1200px;
 background-color: #cfc9c8;
 }
 
+#top-section {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 3em;
+  span.sub {
+    margin: auto 4em;
+    cursor: pointer;
+    color: $black;
+    font-weight: bold;
+  }
+  span.sub:hover{
+    color: $dusty-orange;
+  }
+  h3 {
+    margin-left: 2em;
+    font-family: $outfit;
+  }
+}
+
 #first-section{
   display: flex;
-  flex-direction: column;
-  #top-section {
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 3em;
-    span.sub {
-      margin: auto 4em;
-      cursor: pointer;
-      color: $black;
-      font-weight: bold;
-    }
-    span.sub:hover{
-      color: $dusty-orange;
-    }
-    h3 {
-      margin-left: 2em;
-    }
-  }
+  justify-content: center;
+  height: 72vh;
+
   #name-and-headshot{
       display: flex;
-      justify-content: space-around;
-      padding: 5vh;
+      justify-content: center;
+      flex-direction: column;
+      max-width: 1216px;
+      
     h1 {
-        font-size: 150px;
+        font-size: 128px;
         background: transparent;
         font-family: $birthstone;
     }
@@ -66,11 +72,14 @@ background-color: #cfc9c8;
     img{
       height: 40em;
       width: auto;
-      border: 50px solid $dusty-orange;
       position: relative;
     }
+    p {
+      font-family: $outfit;
+      font-size: 24px;
+    }
   }
-  height: max-content;
+
   #info-modal{
     .title{
       font-family: $outfit;
@@ -86,26 +95,14 @@ background-color: #cfc9c8;
   }
 }
 
-#second-section{
-  height: max-content;
-}
-
-@media screen and (max-width: 800px) {
-  #name-and-headshot {
-    flex-direction: column;
-    #name-wrapper {
-      h1 {
-          font-size: 100px;
-      }
-      height: max-content;
-    }
-    img{
-      height: 1em;
-      width: auto;
-      border: 30px solid $dusty-orange;
-    }
-  }
-}
+// @media screen and (max-width: 800px) {
+//   #name-and-headshot {
+//     flex-direction: column;
+//     #name-wrapper {
+//       height: max-content;
+//     }
+//   }
+// }
 
 
 
