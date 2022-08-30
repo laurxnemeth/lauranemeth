@@ -1,0 +1,187 @@
+//google fonts
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&family=Outfit&display=swap');
+
+// variables
+$dusty-purple: #925E78;
+$black: #18161e;
+$white: #F2EDEB;
+
+//fonts
+$outfit: 'Outfit', sans-serif;
+$birthstone: 'Birthstone Bounce', cursive;
+
+//sizes
+$tablet: 768px;
+
+.App {
+background-color: $white;
+}
+
+button.btn{
+  background-color: $dusty-purple;
+  border-color: $dusty-purple;
+}
+button.btn:hover, .button:hover{
+  background-color: $black;
+  color: $white;
+}
+
+#top-section {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 24px 0 24px;
+
+  & > * {
+    width: 104px;
+      @media screen and (min-width: $tablet) {
+        width: 300px;
+    }
+  }
+
+
+  span.sub {
+    cursor: pointer;
+    color: $black;
+    font-family: $outfit;
+    display: flex;
+    justify-content: flex-end;
+  }
+  span.sub:hover{
+    color: $dusty-purple;
+  }
+  h3 {
+    font-family: $outfit;
+  }
+}
+
+#first-section{
+  display: flex;
+  justify-content: center;
+
+  #name-and-headshot{
+      display: flex;
+      flex-direction: column;
+      max-width: 1216px;
+      
+    h1 {
+        font-size: 104px;
+        background: transparent;
+        font-family: $birthstone;
+    }
+    #name-wrapper{
+      display: flex;
+      flex-direction: column;
+      max-height: 40em; 
+      margin-left: 16px;
+      padding: 62px 0;
+      @media screen and (min-width: $tablet) {
+        margin: 0;
+        flex-direction: row;
+      }
+    }
+    .name{
+        margin: 0px;
+    }
+    img{
+      height: 40em;
+      width: auto;
+    }
+    p {
+      font-family: $outfit;
+      font-size: 24px;
+      margin: 0 16px;
+      padding-bottom: 32px;
+      @media screen and (min-width: $tablet) {
+       
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+      padding: 104px 0;
+  }
+}
+  #info-modal{
+    .title{
+      font-family: $outfit;
+    }
+  }
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+  }
+
+#work-examples-title{
+  font-family: $outfit;
+  font-size: 32px;
+  margin-left: 16px;
+}
+
+.button {
+  font: bold 32px $outfit;
+  text-decoration: none;
+  background-color: $dusty-purple;
+  color: $white;
+  padding: 4px 16px;
+  border-radius: 50px;
+}
+
+.contact-me {
+  font: bold 32px $outfit;
+  text-decoration: none;
+  color: $dusty-purple;
+}
+
+.contact-me:hover {
+  color: $black;
+}
+
+#me {
+    -webkit-animation: color-change 5s infinite;
+    -moz-animation: color-change 5s infinite;
+    -o-animation: color-change 5s infinite;
+    -ms-animation: color-change 5s infinite;
+    animation: color-change 5s infinite;
+}
+
+@-webkit-keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+@-moz-keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+@-ms-keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+@-o-keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+@keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+
+
+
