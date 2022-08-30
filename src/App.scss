@@ -102,13 +102,17 @@ button.btn:hover, .button:hover{
   @media screen and (min-width: $tablet) {
       padding: 104px 0;
   }
-
+}
   #info-modal{
     .title{
       font-family: $outfit;
     }
   }
-}
+
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+  }
 
 #work-examples-title{
   font-family: $outfit;
@@ -123,6 +127,16 @@ button.btn:hover, .button:hover{
   color: $white;
   padding: 4px 16px;
   border-radius: 50px;
+}
+
+.contact-me {
+  font: bold 32px $outfit;
+  text-decoration: none;
+  color: $dusty-purple;
+}
+
+.contact-me:hover {
+  color: $black;
 }
 
 #me {

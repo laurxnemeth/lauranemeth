@@ -1,5 +1,7 @@
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
+import github from '../pictures/GitHub_Logo_White.png'
+
 
 export default function InfoModal(props) {
   return (
@@ -17,9 +19,18 @@ export default function InfoModal(props) {
 			</Modal.Header>
 			<Modal.Body className="text-center">
 				<div className="modal-body">
-					<p>laura@lauranemeth.com</p>
-					<p>you can find me on Linkedin, Github, and Dev.to as</p>
-					<p>LAURXNEMETH</p>
+					<a className="contact-me" href="https://github.com/laurxnemeth">
+						github
+					</a>
+					<a className="contact-me" href="https://linkedin.com/in/laurxnemeth">
+						linkedin
+					</a>
+					<a className="contact-me" href="https://dev.to/laurxnemeth">
+						dev.to
+					</a>
+					<a className="contact-me" href="mailto:laura@lauranemeth.com">
+						laura@lauranemeth.com
+					</a>
 				</div>
 			</Modal.Body>
 			<Modal.Footer>
