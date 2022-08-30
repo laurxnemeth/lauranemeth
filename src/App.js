@@ -10,6 +10,7 @@ function App() {
 			<Header />
 			<div className="pegao">
 				<NameAndHeadshot />
+				<h2 id="work-examples-title">what I've worked on:</h2>
 				<WorkExamples />
 			</div>
 		</div>

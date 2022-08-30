@@ -1,45 +1,57 @@
 //google fonts
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&family=Outfit&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Outfit&display=swap');
 
 // variables
-$dusty-orange: #c98176;
+$dusty-purple: #925E78;
 $black: #18161e;
-$brown: #87705f;
-$grey:#cfc9c8;
+$white: #F2EDEB;
 
 //fonts
 $outfit: 'Outfit', sans-serif;
 $birthstone: 'Birthstone Bounce', cursive;
-$montserrat: 'Montserrat', sans-serif;
 
 //sizes
-$mobile: 480px;
 $tablet: 768px;
-$laptop: 1024px;
-$desktop: 1200px;
 
 .App {
-background-color: #cfc9c8;
+background-color: $white;
+}
+
+button.btn{
+  background-color: $dusty-purple;
+  border-color: $dusty-purple;
+}
+button.btn:hover, .button:hover{
+  background-color: $black;
+  color: $white;
 }
 
 #top-section {
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 3em;
+  padding: 40px 24px 0 24px;
+
+  & > * {
+    width: 104px;
+      @media screen and (min-width: $tablet) {
+        width: 300px;
+    }
+  }
+
+
   span.sub {
-    margin: auto 4em;
     cursor: pointer;
     color: $black;
-    font-weight: bold;
+    font-family: $outfit;
+    display: flex;
+    justify-content: flex-end;
   }
   span.sub:hover{
-    color: $dusty-orange;
+    color: $dusty-purple;
   }
   h3 {
-    margin-left: 2em;
     font-family: $outfit;
   }
 }
@@ -47,16 +59,14 @@ background-color: #cfc9c8;
 #first-section{
   display: flex;
   justify-content: center;
-  height: 72vh;
 
   #name-and-headshot{
       display: flex;
-      justify-content: center;
       flex-direction: column;
       max-width: 1216px;
       
     h1 {
-        font-size: 128px;
+        font-size: 104px;
         background: transparent;
         font-family: $birthstone;
     }
@@ -64,7 +74,12 @@ background-color: #cfc9c8;
       display: flex;
       flex-direction: column;
       max-height: 40em; 
-      position: relative;
+      margin-left: 16px;
+      padding: 62px 0;
+      @media screen and (min-width: $tablet) {
+        margin: 0;
+        flex-direction: row;
+      }
     }
     .name{
         margin: 0px;
@@ -72,37 +87,87 @@ background-color: #cfc9c8;
     img{
       height: 40em;
       width: auto;
-      position: relative;
     }
     p {
       font-family: $outfit;
       font-size: 24px;
+      margin: 0 16px;
+      padding-bottom: 32px;
+      @media screen and (min-width: $tablet) {
+       
+      }
     }
+  }
+
+  @media screen and (min-width: $tablet) {
+      padding: 104px 0;
   }
 
   #info-modal{
     .title{
       font-family: $outfit;
     }
-    button.btn{
-      background-color: $dusty-orange;
-      border-color: $dusty-orange;
-    }
-    button.btn:hover{
-      background-color: $black;
-      color: $grey;
-    }
   }
 }
 
-// @media screen and (max-width: 800px) {
-//   #name-and-headshot {
-//     flex-direction: column;
-//     #name-wrapper {
-//       height: max-content;
-//     }
-//   }
-// }
+#work-examples-title{
+  font-family: $outfit;
+  font-size: 32px;
+  margin-left: 16px;
+}
+
+.button {
+  font: bold 32px $outfit;
+  text-decoration: none;
+  background-color: $dusty-purple;
+  color: $white;
+  padding: 4px 16px;
+  border-radius: 50px;
+}
+
+#me {
+    -webkit-animation: color-change 5s infinite;
+    -moz-animation: color-change 5s infinite;
+    -o-animation: color-change 5s infinite;
+    -ms-animation: color-change 5s infinite;
+    animation: color-change 5s infinite;
+}
+
+@-webkit-keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+@-moz-keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+@-ms-keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+@-o-keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
+@keyframes color-change {
+    0% { color: #ff6680; }
+    25% { color: #ffe666; }
+    50% { color: #66ff99; }
+    75% { color: #66ccff; }
+    100% { color: #9966ff; }
+}
 
 
 

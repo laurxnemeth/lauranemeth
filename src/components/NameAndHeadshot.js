@@ -7,7 +7,8 @@ export default function NameAndHeadshot() {
 			<div id="name-and-headshot">
 				<div id="name-wrapper">
 					<h1 className="name">hello!</h1>
-					<h1 className="name">I am Laura Nemeth</h1>
+					<h1 className="name">I am</h1>
+					<h1 className="name" id="me">Laura Nemeth</h1>
 				</div>
 				<p>
 					Let's collaborate on beautiful websites, apps, and more! I am
