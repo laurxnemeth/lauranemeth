@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&family=Outfit&display=swap');
 
 // variables
-$dusty-purple: #925E78;
+$highlights: #66ccff;;
 $black: #18161e;
 $white: #F2EDEB;
 
@@ -13,14 +13,15 @@ $birthstone: 'Birthstone Bounce', cursive;
 
 //sizes
 $tablet: 768px;
+$laptop: 1024px;
 
 .App {
 background-color: $white;
 }
 
 button.btn{
-  background-color: $dusty-purple;
-  border-color: $dusty-purple;
+  background-color: $highlights;
+  border-color: $highlights;
 }
 button.btn:hover, .button:hover{
   background-color: $black;
@@ -49,7 +50,7 @@ button.btn:hover, .button:hover{
     justify-content: flex-end;
   }
   span.sub:hover{
-    color: $dusty-purple;
+    color: $highlights;
   }
   h3 {
     font-family: $outfit;
@@ -74,11 +75,12 @@ button.btn:hover, .button:hover{
       display: flex;
       flex-direction: column;
       max-height: 40em; 
-      margin-left: 16px;
       padding: 62px 0;
-      @media screen and (min-width: $tablet) {
-        margin: 0;
+      text-align: center;
+      @media screen and (min-width: $laptop) {
+        margin: 0 0 0 16px;
         flex-direction: row;
+        text-align: left;
       }
     }
     .name{
@@ -103,6 +105,13 @@ button.btn:hover, .button:hover{
       padding: 104px 0;
   }
 }
+
+#accessible-header{
+  opacity:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
   #info-modal{
     .title{
       font-family: $outfit;
@@ -123,16 +132,16 @@ button.btn:hover, .button:hover{
 .button {
   font: bold 32px $outfit;
   text-decoration: none;
-  background-color: $dusty-purple;
+  background-color: $highlights;
   color: $white;
   padding: 4px 16px;
   border-radius: 50px;
 }
 
 .contact-me {
-  font: bold 32px $outfit;
+  font: bold 24px $outfit;
   text-decoration: none;
-  color: $dusty-purple;
+  color: $highlights;
 }
 
 .contact-me:hover {
@@ -182,6 +191,7 @@ button.btn:hover, .button:hover{
     75% { color: #66ccff; }
     100% { color: #9966ff; }
 }
+
 
 
 
